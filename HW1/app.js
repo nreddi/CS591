@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var HW1 = require('./routes/HW1') //calls HW1
+var HW2 = require('./routes/HW2') //calls HW2
 var app = express();
 
 // view engine setup
@@ -25,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 app.use('/HW1', HW1); //calls HW1 route
+app.use('/HW2', HW2); //calls HW2 route
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
